@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+
+        android:id="@+id/action_guide"
+        android:icon="@drawable/ic_action_overflow"
+        android:title="@string/guide_menu"
+        android:showAsAction="always" >
+        
+        <menu>
+            <item android:id="@+id/changeVectorB"
+                  android:title="@string/change_vector_b" />
+            <item android:id="@+id/determinant"
+                  android:title="@string/determinant" />
+            <item android:id="@+id/matrixInverse"
+                  android:title="@string/calc_mat_inverse" />
+            <item android:id="@+id/stagesTable"
+                  android:title="@string/stages_table" />
+            <item android:id="@+id/help"
+                  android:title="@string/help" />
+            <item android:id="@+id/seeExample"
+                  android:title="@string/see_example" />
+        </menu>
+        
+    </item>
+
+</menu>

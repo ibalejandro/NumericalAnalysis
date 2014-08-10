@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF" >
+    
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+    
+    	<LinearLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent"
+	    	android:orientation="vertical" >
+   
+		    <RelativeLayout
+		        
+			    android:id="@+id/secant_view"
+			    android:layout_width="match_parent"
+			    android:layout_height="460dp" >
+		
+		    	<EditText
+			        android:id="@+id/secant_etXLower"
+			        android:layout_width="160dp"
+			        android:layout_height="wrap_content"
+			        android:layout_alignLeft="@+id/secant_etXUpper"
+			        android:layout_alignParentTop="true"
+			        android:layout_marginTop="75dp"
+			        android:ems="10"
+			        android:singleLine="true"
+			        android:hint="@string/enter_x_lower" />
+		
+		    	<EditText
+			        android:id="@+id/secant_etXUpper"
+			        android:layout_width="160dp"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/secant_etXLower"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="20dp"
+			        android:ems="10"
+			        android:singleLine="true"
+			        android:hint="@string/enter_x_upper" />
+		
+		    	<TextView
+			        android:id="@+id/secant_s"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/secant_ove"
+			        android:layout_centerHorizontal="true"
+			        android:text="@string/secant" />
+		
+		    	<TextView
+			        android:id="@+id/secant_ove"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:layout_centerHorizontal="true"
+			        android:text="@string/one_variable_eq"
+			        android:textColor="#FF6633"
+			        android:textStyle="bold"
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		    	<EditText
+		    	    android:id="@+id/secant_etTolerance"
+		    	    android:layout_width="250dp"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_below="@+id/secant_etXUpper"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:layout_marginTop="30dp"
+		    	    android:ems="10"
+		    	    android:textSize="14sp"
+		    	    android:singleLine="true"
+		    	    android:hint="@string/enter_tolerance" />
+		
+		    	<EditText
+		    	    android:id="@+id/secant_etNIterations"
+		    	    android:layout_width="240dp"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_below="@+id/secant_etTolerance"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:layout_marginTop="80dp"
+		    	    android:ems="10"
+		    	    android:singleLine="true"
+		    	    android:hint="@string/enter_iterations"
+		    	    android:inputType="number" />
+		
+		    	<Button
+		    	    android:id="@+id/secant_calculate"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_below="@+id/secant_etNIterations"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:layout_marginTop="32dp"
+		    	    android:background="@drawable/button_shape"
+		    	    android:onClick="secant"
+		    	    android:padding="10dp"
+		    	    android:text="@string/calculate"
+		    	    android:textColor="#FF6633"
+		    	    android:textStyle="bold" />
+		
+		    	<RadioButton
+		    	    android:id="@+id/secant_relError"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_alignBaseline="@+id/secant_absError"
+		    	    android:layout_alignBottom="@+id/secant_absError"
+		    	    android:layout_alignParentRight="true"
+		    	    android:layout_marginRight="23dp"
+		    	    android:text="@string/rel_error"
+		    	    android:onClick="selectErrorType" />
+		
+		    	<RadioButton
+		    	    android:id="@+id/secant_absError"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_alignParentLeft="true"
+		    	    android:layout_below="@+id/secant_etTolerance"
+		    	    android:layout_marginLeft="15dp"
+		    	    android:layout_marginTop="27dp"
+		    	    android:text="@string/abs_error" 
+		    	    android:onClick="selectErrorType" />
+		
+		    </RelativeLayout>
+		    
+		    <RelativeLayout 
+			    
+			    android:id="@+id/secant_result_view"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent" >
+			
+		    	<TextView
+			        android:id="@+id/secant_method_result"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="182dp"
+			        android:layout_marginLeft="10dp"
+			        android:layout_marginRight="10dp"
+			        android:gravity="center"
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+			</RelativeLayout>
+			
+	    </LinearLayout>
+    
+	</ScrollView>
+	
+    
+</RelativeLayout>

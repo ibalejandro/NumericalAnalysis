@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF" >
+
+   	<Button
+   	    android:id="@+id/topics_interpolation"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentBottom="true"
+   	    android:layout_centerHorizontal="true"
+   	    android:layout_marginBottom="76dp"
+   	    android:background="@drawable/button_shape"
+   	    android:onClick="goToInterpolation"
+   	    android:padding="10dp"
+   	    android:text="@string/interpolation"
+   	    android:textColor="#FF6633"
+   	    android:textSize="22sp"
+   	    android:textStyle="bold" />
+
+   	<Button
+   	    android:id="@+id/topics_oneVariableEq"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentTop="true"
+   	    android:layout_centerHorizontal="true"
+   	    android:layout_marginTop="68dp"
+   	    android:background="@drawable/button_shape"
+   	    android:onClick="goToOneVariableEq"
+   	    android:padding="10dp"
+   	    android:text="@string/one_variable_eq"
+   	    android:textColor="#FF6633"
+   	    android:textSize="22sp"
+   	    android:textStyle="bold" />
+
+   	<Button
+   	    android:id="@+id/topics_systemsOfEq"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_centerHorizontal="true"
+   	    android:layout_centerVertical="true"
+   	    android:background="@drawable/button_shape"
+   	    android:onClick="goToSystemsOfEq"
+   	    android:padding="10dp"
+   	    android:text="@string/systems_of_eq"
+   	    android:textColor="#FF6633"
+   	    android:textSize="22sp"
+   	    android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF" >
+    
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+  
+            <RelativeLayout
+                android:id="@+id/input_eval_functions_view"
+                android:layout_width="match_parent"
+                android:layout_height="460dp" >
+
+                <Button
+                    android:id="@+id/input_eval_functions_goToMethods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/input_eval_functions_Xn_table"
+                    android:background="@drawable/button_shape"
+                    android:onClick="captureInputEvalFunctions"
+                    android:padding="10dp"
+                    android:text="@string/go_to_methods"
+                    android:textColor="#FF6633"
+                    android:textStyle="bold" />
+
+                <TableLayout
+                    android:id="@+id/input_eval_functions_fXn_table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/input_eval_functions_goToMethods"
+                    android:layout_alignTop="@+id/input_eval_functions_Xn_table" >
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/input_eval_functions_fXn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/input_eval_functions_Xn_table"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="58dp"
+                    android:text="@string/enter_fXn"
+                    android:textColor="#FF6633"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/input_eval_functions_Xn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="44dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_toLeftOf="@+id/input_eval_functions_fXn"
+                    android:text="@string/enter_Xn"
+                    android:textColor="#FF6633"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TableLayout
+                    android:id="@+id/input_eval_functions_Xn_table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/input_eval_functions_Xn"
+                    android:layout_below="@+id/input_eval_functions_Xn"
+                    android:layout_marginTop="16dp" >
+                </TableLayout>
+
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/input_eval_functions_choice_view"
+                android:layout_width="match_parent"
+                android:layout_height="460dp" >
+
+                <EditText
+                    android:id="@+id/input_eval_functions_pointsNumber"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="182dp"
+                    android:ems="10"
+                    android:hint="@string/enter_points_number"
+                    android:singleLine="true"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/input_eval_functions_createTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_eval_functions_pointsNumber"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="41dp"
+                    android:background="@drawable/button_shape"
+                    android:onClick="createTable"
+			        android:padding="10dp"
+			        android:textColor="#FF6633"
+			        android:textStyle="bold"
+                    android:text="@string/create_table" />
+
+	    	</RelativeLayout>
+	    	
+       	</LinearLayout>
+       	
+     </ScrollView>
+
+    
+</RelativeLayout>

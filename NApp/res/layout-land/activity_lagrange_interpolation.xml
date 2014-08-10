@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF" >
+
+    
+    <ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:fillViewport="true" >
+	    
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	        
+		    <RelativeLayout
+		        android:id="@+id/lagrange_interpolation_result_view"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        >
+		
+		        <TextView
+		            android:id="@+id/lagrange_interpolation_i"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentTop="true"
+		            android:layout_centerHorizontal="true"
+		            android:text="@string/interpolation"
+		            android:textAppearance="?android:attr/textAppearanceMedium"
+		            android:textColor="#FF6633"
+		            android:textStyle="bold" />
+		
+		        <TextView
+		            android:id="@+id/lagrange_interpolation_li"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/lagrange_interpolation_i"
+		            android:layout_centerHorizontal="true"
+		            android:text="@string/lagrange_interpolation" />
+		
+		        <TextView
+		            android:id="@+id/lagrange_interpolation_method_result_label"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/lagrange_interpolation_li"
+		            android:layout_centerHorizontal="true"
+		            android:layout_marginTop="19dp"
+		            android:gravity="center"
+		            android:text="@string/lagrange_polynomial"
+		            android:textAppearance="?android:attr/textAppearanceMedium"
+		            android:textColor="#FF6633" />
+		
+		        <Button
+		            android:id="@+id/lagrange_interpolation_evaluate"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignTop="@+id/lagrange_interpolation_evaluate_value"
+		            android:layout_toRightOf="@+id/lagrange_interpolation_evaluate_value"
+		            android:background="@drawable/button_shape"
+		            android:onClick="evaluateWithX"
+		            android:padding="10dp"
+		            android:text="@string/evaluate"
+		            android:textColor="#FF6633"
+		            android:textStyle="bold" />
+		
+		        <TextView
+		            android:id="@+id/lagrange_interpolation_evaluate_value_label"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignBaseline="@+id/lagrange_interpolation_evaluate"
+		            android:layout_alignBottom="@+id/lagrange_interpolation_evaluate"
+		            android:layout_marginRight="14dp"
+		            android:layout_toLeftOf="@+id/lagrange_interpolation_evaluate_value"
+		            android:text="@string/x"
+		            android:textAppearance="?android:attr/textAppearanceMedium"
+		            android:textStyle="bold" />
+		
+		        <TextView
+		            android:id="@+id/lagrange_interpolation_method_result"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_below="@+id/lagrange_interpolation_method_result_label"
+		            android:gravity="center" />
+		
+		        <EditText
+		            android:id="@+id/lagrange_interpolation_evaluate_value"
+		            android:layout_width="115dp"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentBottom="true"
+		            android:layout_alignRight="@+id/lagrange_interpolation_i"
+		            android:layout_marginBottom="26dp"
+		            android:layout_marginRight="19dp"
+		            android:ems="10"
+		            android:hint="@string/enter_x_value"
+		            android:singleLine="true"
+		            android:textSize="15sp" />
+		
+		    </RelativeLayout>
+		    
+	    </LinearLayout>
+	    
+    </ScrollView>
+    
+			
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.numericalanalysis.napp.LagrangeInterpolation" >
+
+    <item
+
+        android:id="@+id/action_guide"
+        android:icon="@drawable/ic_action_overflow"
+        android:title="@string/guide_menu"
+        android:showAsAction="always" >
+        
+        <menu>
+            <item android:id="@+id/evaluatePolynomial"
+                  android:title="@string/evaluate_polynomial" />
+            <item android:id="@+id/help"
+                  android:title="@string/help" />
+        </menu>
+        
+    </item>
+
+</menu>

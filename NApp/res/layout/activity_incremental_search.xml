@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/incremental_search_view"
+                android:layout_width="match_parent"
+                android:layout_height="460dp" >
+
+                <EditText
+                    android:id="@+id/incrementalSearch_etX0"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/incrementalSearch_etDelta"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="75dp"
+                    android:ems="10"
+                    android:hint="@string/enter_initial_value"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/incrementalSearch_etDelta"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/incrementalSearch_etX0"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="@string/enter_delta_value"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/incrementalSearch_is"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/incrementalSearch_ove"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/incremental_search" />
+
+                <TextView
+                    android:id="@+id/incrementalSearch_ove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/one_variable_eq"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FF6633"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/incrementalSearch_calculate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="75dp"
+                    android:background="@drawable/button_shape"
+                    android:onClick="incrementalSearch"
+                    android:padding="10dp"
+                    android:text="@string/calculate"
+                    android:textColor="#FF6633"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/incrementalSearch_etNIterations"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:ems="10"
+                    android:hint="@string/enter_iterations"
+                    android:inputType="number"
+                    android:singleLine="true" />
+            </RelativeLayout>
+            
+            <RelativeLayout 
+		    
+			    android:id="@+id/incrementalSearch_result_view"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent" >
+			
+		    	<TextView
+			        android:id="@+id/incrementalSearch_method_result"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="182dp"
+			        android:layout_marginLeft="10dp"
+			        android:layout_marginRight="10dp"
+			        android:gravity="center"
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+			</RelativeLayout>
+			
+        </LinearLayout>
+        
+    </ScrollView>
+		    
+</RelativeLayout>

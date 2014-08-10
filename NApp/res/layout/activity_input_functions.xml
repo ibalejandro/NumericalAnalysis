@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF" >
+    
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/input_functions_view"
+                android:layout_width="match_parent"
+                android:layout_height="460dp" >
+
+			    <EditText
+			        android:id="@+id/inputFunction_fX"
+			        android:layout_width="220dp"
+			        android:layout_height="wrap_content"
+			        android:layout_alignLeft="@+id/inputFunction_gX"
+			        android:layout_alignParentTop="true"
+			        android:layout_marginTop="42dp"
+			        android:singleLine="true"
+			        android:hint="@string/enter_f_x"
+			        android:ems="10" />
+			
+			    <EditText
+			        android:id="@+id/inputFunction_dfX"
+			        android:layout_width="220dp"
+			        android:layout_height="wrap_content"
+			        android:layout_alignLeft="@+id/inputFunction_fX"
+			        android:layout_below="@+id/inputFunction_fX"
+			        android:layout_marginTop="43dp"
+			        android:singleLine="true"
+			        android:hint="@string/enter_d_f_x"
+			        android:ems="10" />
+			
+			    <EditText
+			        android:id="@+id/inputFunction_d2fX"
+			        android:layout_width="222dp"
+			        android:layout_height="wrap_content"
+			        android:layout_alignLeft="@+id/inputFunction_dfX"
+			        android:layout_below="@+id/inputFunction_dfX"
+			        android:layout_marginTop="41dp"
+			        android:singleLine="true"
+			        android:hint="@string/enter_d_2_f_x"
+			        android:ems="10" />
+			
+			    <Button
+			        android:id="@+id/inputFunctions_goToMethods"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentBottom="true"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginBottom="50dp"
+			        android:padding="10dp"
+			        android:background="@drawable/button_shape"
+			        android:text="@string/go_to_methods"
+				    android:textColor="#FF6633"
+				    android:textStyle="bold" 
+				    android:onClick="captureInputFunctions"/>
+			
+			    <EditText
+			        android:id="@+id/inputFunction_gX"
+			        android:layout_width="220dp"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentRight="true"
+			        android:layout_below="@+id/inputFunction_d2fX"
+			        android:layout_marginRight="22dp"
+			        android:layout_marginTop="43dp"
+			        android:singleLine="true"
+			        android:hint="@string/enter_g_x"
+			        android:ems="10" />
+			
+			    <TextView
+			        android:id="@+id/inputFunctions_labelD2fX"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignBottom="@+id/inputFunction_d2fX"
+			        android:layout_alignLeft="@+id/inputFunctions_labelDfX"
+			        android:textColor="#FF6633"
+				    android:textStyle="bold"
+				    android:textSize="15sp"
+			        android:text="@string/d2f_x" />
+			
+			    <TextView
+			        android:id="@+id/inputFunctions_labelDfX"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignBottom="@+id/inputFunction_dfX"
+			        android:layout_toLeftOf="@+id/inputFunctions_goToMethods"
+			        android:textColor="#FF6633"
+				    android:textStyle="bold"
+				    android:textSize="15sp"
+			        android:text="@string/df_x" />
+			
+			    <TextView
+			        android:id="@+id/inputFunctions_labelFX"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_above="@+id/inputFunction_dfX"
+			        android:layout_alignRight="@+id/inputFunctions_labelDfX"
+			        android:textColor="#FF6633"
+				    android:textStyle="bold"
+				    android:textSize="15sp"
+			        android:text="@string/f_x" />
+			
+			    <TextView
+			        android:id="@+id/inputFunctions_labelGX"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignBottom="@+id/inputFunction_gX"
+			        android:layout_toLeftOf="@+id/inputFunctions_goToMethods"
+			        android:textColor="#FF6633"
+				    android:textStyle="bold"
+				    android:textSize="15sp"
+			        android:text="@string/g_x" />
+			    
+	    	</RelativeLayout>
+	    	
+       	</LinearLayout>
+       	
+      </ScrollView>
+	    	
+
+</RelativeLayout>

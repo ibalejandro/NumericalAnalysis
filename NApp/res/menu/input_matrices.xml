@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<item
+
+        android:id="@+id/action_guide"
+        android:icon="@drawable/ic_action_overflow"
+        android:title="@string/guide_menu"
+        android:showAsAction="always" >
+        
+        <menu>
+            <item android:id="@+id/seeHowToEnterMatrices"
+                  android:title="@string/how_to_enter_matrix" />
+            <item android:id="@+id/seeExample"
+                  android:title="@string/see_example" />
+        </menu>
+        
+    </item>
+    
+</menu>

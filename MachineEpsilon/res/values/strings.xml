@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MachineEpsilon</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="type_cond">Select type and condition</string>
+    <string name="double_condition1">Double and Condition (1 != 1 + D)</string>
+    <string name="float_condition1">Float and Condition (1 != 1 + D)</string>
+    <string name="double_condition2">Double and Condition (0 != D)</string>
+    <string name="float_condition2">Float and Condition (0 != D)</string>
+    <string name="calculate">Calculate</string>
+    <string name="title_activity_machine_eps_calc">MachineEpsCalc</string>
+    <string name="result_title">The Machine Epsilon is:</string>
+
+</resources>

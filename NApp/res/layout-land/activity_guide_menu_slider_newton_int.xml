@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF" >
+    
+    
+    <ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+	    
+	    <RelativeLayout
+	        android:id="@+id/guide_menu_root_view"
+	        android:layout_width="match_parent"
+	        android:layout_height="255dp" >
+		
+		    <TableLayout
+		        android:id="@+id/soe_stage_matrix"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:layout_centerVertical="true" />
+
+		    <TextView
+		        android:id="@+id/soe_current_stage"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentBottom="true"
+		        android:layout_centerHorizontal="true"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="#FF6633"
+		        android:padding="12dp"
+		        android:textStyle="bold" />
+
+		    <TextView
+		        android:id="@+id/soe_next_label"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentBottom="true"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginRight="83dp"
+		        android:clickable="true"
+		        android:onClick="setStageAndMatrix"
+		        android:padding="12dp"
+		        android:text="@string/next"
+		        android:textSize="17sp" />
+
+		    <ZoomControls
+		        android:id="@+id/zoomControls"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/soe_next_label"
+		        android:layout_alignTop="@+id/soe_results_table_method_name" />
+
+		    <TextView
+		        android:id="@+id/soe_results_table_method_name"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/soe_results_table_action"
+		        android:layout_marginLeft="50dp"/>
+
+		    <TextView
+		        android:id="@+id/soe_results_table_action"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentTop="true"
+		        android:layout_marginLeft="50dp"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="#FF6633"
+		        android:textStyle="bold" />
+
+		    <TextView
+		        android:id="@+id/soe_previous_label"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/soe_results_table_method_name"
+		        android:layout_alignParentBottom="true"
+		        android:clickable="true"
+		        android:onClick="setStageAndMatrix"
+		        android:padding="12dp"
+		        android:text="@string/previous"
+		        android:textSize="17sp" />
+		    
+		    </RelativeLayout>
+		    
+	    </ScrollView>
+	    
+
+</RelativeLayout>

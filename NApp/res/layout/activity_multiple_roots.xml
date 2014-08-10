@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF" >
+    
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+        
+    	<LinearLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent"
+	    	android:orientation="vertical" >
+
+		    <RelativeLayout
+		        
+			    android:id="@+id/multiple_roots_view"
+			    android:layout_width="match_parent"
+			    android:layout_height="460dp" >
+		
+		    	<TextView
+			        android:id="@+id/multipleRoots_mr"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/multipleRoots_ove"
+			        android:layout_centerHorizontal="true"
+			        android:text="@string/multiple_roots" />
+		
+		  	  	<TextView
+			        android:id="@+id/multipleRoots_ove"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:layout_centerHorizontal="true"
+			        android:text="@string/one_variable_eq"
+			        android:textColor="#FF6633"
+			        android:textStyle="bold"
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		  	  	<EditText
+		  	  	    android:id="@+id/multipleRoots_etNIterations"
+		  	  	    android:layout_width="240dp"
+		  	  	    android:layout_height="wrap_content"
+		  	  	    android:layout_above="@+id/multipleRoots_calculate"
+		  	  	    android:layout_centerHorizontal="true"
+		  	  	    android:layout_marginBottom="32dp"
+		  	  	    android:ems="10"
+		  	  	    android:singleLine="true"
+		  	  	    android:hint="@string/enter_iterations"
+		  	  	    android:inputType="number" />
+		
+		  	  	<RadioButton
+		  	  	    android:id="@+id/multipleRoots_relError"
+		  	  	    android:layout_width="wrap_content"
+		  	  	    android:layout_height="wrap_content"
+		  	  	    android:layout_alignBaseline="@+id/multipleRoots_absError"
+		  	  	    android:layout_alignBottom="@+id/multipleRoots_absError"
+		  	  	    android:layout_marginLeft="16dp"
+		  	  	    android:layout_toRightOf="@+id/multipleRoots_absError"
+		  	  	    android:text="@string/rel_error"
+		  	  	    android:onClick="selectErrorType" />
+		
+		  	  	<Button
+		  	  	    android:id="@+id/multipleRoots_calculate"
+		  	  	    android:layout_width="wrap_content"
+		  	  	    android:layout_height="wrap_content"
+		  	  	    android:layout_alignParentBottom="true"
+		  	  	    android:layout_centerHorizontal="true"
+		  	  	    android:layout_marginBottom="34dp"
+		  	  	    android:background="@drawable/button_shape"
+		  	  	    android:onClick="multipleRoots"
+		  	  	    android:padding="10dp"
+		  	  	    android:text="@string/calculate"
+		  	  	    android:textColor="#FF6633"
+		  	  	    android:textStyle="bold" />
+
+		  	  	<EditText
+		  	  	    android:id="@+id/multipleRoots_etX0"
+		  	  	    android:layout_width="170dp"
+		  	  	    android:layout_height="wrap_content"
+		  	  	    android:layout_below="@+id/multipleRoots_mr"
+		  	  	    android:layout_centerHorizontal="true"
+		  	  	    android:layout_marginTop="51dp"
+		  	  	    android:ems="10"
+		  	  	    android:hint="@string/enter_initial_value"
+		  	  	    android:singleLine="true" >
+
+		  	  	    <requestFocus />
+		  	  	</EditText>
+
+		  	  	<RadioButton
+		  	  	    android:id="@+id/multipleRoots_absError"
+		  	  	    android:layout_width="wrap_content"
+		  	  	    android:layout_height="wrap_content"
+		  	  	    android:layout_above="@+id/multipleRoots_etNIterations"
+		  	  	    android:layout_alignParentLeft="true"
+		  	  	    android:layout_marginBottom="34dp"
+		  	  	    android:layout_marginLeft="18dp"
+		  	  	    android:onClick="selectErrorType"
+		  	  	    android:text="@string/abs_error" />
+
+		  	  	<EditText
+		  	  	    android:id="@+id/multipleRoots_etTolerance"
+		  	  	    android:layout_width="250dp"
+		  	  	    android:layout_height="wrap_content"
+		  	  	    android:layout_above="@+id/multipleRoots_relError"
+		  	  	    android:layout_centerHorizontal="true"
+		  	  	    android:layout_marginBottom="41dp"
+		  	  	    android:ems="10"
+		  	  	    android:hint="@string/enter_tolerance"
+		  	  	    android:singleLine="true"
+		  	  	    android:textSize="14sp" />
+		  	  	    
+		    </RelativeLayout>
+		    
+		    <RelativeLayout 
+	    
+			    android:id="@+id/multipleRoots_result_view"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent" >
+			
+		    	<TextView
+			        android:id="@+id/multipleRoots_method_result"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="182dp"
+			        android:layout_marginLeft="10dp"
+			        android:layout_marginRight="10dp"
+			        android:gravity="center"
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+			</RelativeLayout>
+		    
+	    </LinearLayout>
+	    
+   	</ScrollView>
+    
+    
+</RelativeLayout>

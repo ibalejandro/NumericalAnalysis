@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF" >
+
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+        
+		<LinearLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent"
+	    	android:orientation="vertical" >
+	    	 
+			<RelativeLayout
+		        android:id="@+id/gaussian_elimination_view"
+		        android:layout_width="match_parent"
+		        android:layout_height="460dp" >
+
+		        <TextView
+		            android:id="@+id/gaussian_elimination_ge"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/gaussian_elimination_soe"
+		            android:layout_centerHorizontal="true"
+		            android:text="@string/gaussian_elimination" />
+
+		        <TextView
+		            android:id="@+id/gaussian_elimination_soe"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentTop="true"
+		            android:layout_centerHorizontal="true"
+		            android:text="@string/systems_of_eq"
+		            android:textAppearance="?android:attr/textAppearanceMedium"
+		            android:textColor="#FF6633"
+		            android:textStyle="bold" />
+
+		        <Button
+		            android:id="@+id/gaussian_elimination_calculate"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentBottom="true"
+		            android:layout_centerHorizontal="true"
+		            android:layout_marginBottom="74dp"
+		            android:background="@drawable/button_shape"
+		            android:onClick="gaussianElimination"
+		            android:padding="10dp"
+		            android:text="@string/calculate"
+		            android:textColor="#FF6633"
+		            android:textStyle="bold" />
+
+		        <RadioButton
+		            android:id="@+id/gaussian_elimination_total_pivoting"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignLeft="@+id/gaussian_elimination_partial_pivoting"
+		            android:layout_below="@+id/gaussian_elimination_partial_pivoting"
+		            android:layout_marginTop="15dp"
+		            android:onClick="selectPivotingType"
+		            android:text="@string/total_pivoting" />
+
+		        <RadioButton
+		            android:id="@+id/gaussian_elimination_without_pivoting"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignRight="@+id/gaussian_elimination_ge"
+		            android:layout_below="@+id/gaussian_elimination_ge"
+		            android:layout_marginTop="55dp"
+		            android:onClick="selectPivotingType"
+		            android:text="@string/without_pivoting" />
+
+		        <RadioButton
+		            android:id="@+id/gaussian_elimination_partial_pivoting"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignLeft="@+id/gaussian_elimination_without_pivoting"
+		            android:layout_below="@+id/gaussian_elimination_without_pivoting"
+		            android:layout_marginTop="23dp"
+		            android:onClick="selectPivotingType"
+		            android:text="@string/partial_pivoting" />
+
+		        <RadioButton
+		            android:id="@+id/gaussian_elimination_scaled_partial_pivoting"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignLeft="@+id/gaussian_elimination_total_pivoting"
+		            android:layout_below="@+id/gaussian_elimination_total_pivoting"
+		            android:layout_marginTop="17dp"
+		            android:onClick="selectPivotingType"
+		            android:text="@string/scaled_partial_pivoting" />
+
+		    </RelativeLayout>
+	
+		    <RelativeLayout 
+			    
+			    android:id="@+id/gaussian_elimination_result_view"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent" >
+			
+		    	<TextView
+			        android:id="@+id/gaussian_elimination_method_result"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="182dp"
+			        android:layout_marginLeft="10dp"
+			        android:layout_marginRight="10dp"
+			        android:gravity="center"
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		    	<TextView
+		    	    android:id="@+id/gaussian_elimiantion_pivoting_label"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_alignParentLeft="true"
+		    	    android:layout_alignParentTop="true"
+		    	    android:layout_marginLeft="28dp"
+		    	    android:layout_marginTop="21dp"
+		    	    android:textColor="#FF6633"
+		    	    android:text="@string/pivoting"
+		    	    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		    	<TextView
+		    	    android:id="@+id/gaussian_elimiantion_pivoting_used"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_alignBaseline="@+id/gaussian_elimiantion_pivoting_label"
+		    	    android:layout_alignBottom="@+id/gaussian_elimiantion_pivoting_label"
+		    	    android:layout_marginLeft="28dp"
+		    	    android:layout_toRightOf="@+id/gaussian_elimiantion_pivoting_label"
+		    	    android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+			</RelativeLayout>
+			
+	     </LinearLayout>
+    
+	</ScrollView>
+	
+
+</RelativeLayout>

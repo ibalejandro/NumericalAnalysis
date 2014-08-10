@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF" >
+    
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+            
+            <RelativeLayout
+                android:id="@+id/input_matrices_view"
+                android:layout_width="match_parent"
+                android:layout_height="460dp" >
+			
+			    <TextView
+			        android:id="@+id/inputMatrices_labelMatA"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/enter_matrix_a"
+			        android:textColor="#FF6633"
+			        android:textSize="20sp"
+			        android:textStyle="bold" />
+
+			    <TableLayout
+			        android:id="@+id/inputMatrices_inputMatA"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/inputMatrices_labelMatA"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="10dp" >
+
+			    </TableLayout>
+
+			    <Button
+			        android:id="@+id/inputMatrices_goToMethods"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentBottom="true"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginBottom="30dp"
+			        android:background="@drawable/button_shape"
+			        android:onClick="captureInputMatrices"
+			        android:padding="10dp"
+			        android:text="@string/go_to_methods"
+			        android:textColor="#FF6633"
+			        android:textStyle="bold" />
+
+			    <TextView
+			        android:id="@+id/inputMatrices_labelVecB"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/inputMatrices_inputMatA"
+			        android:text="@string/enter_vector_b"
+			        android:textColor="#FF6633"
+			        android:textSize="20sp"
+			        android:textStyle="bold" />
+
+			    <TableLayout
+			        android:id="@+id/inputMatrices_inputVecB"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/inputMatrices_labelVecB"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginBottom="54dp" >
+			    </TableLayout>
+			    
+	    	</RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/input_matrices_choice_view"
+                android:layout_width="match_parent"
+                android:layout_height="460dp" >
+
+                <EditText
+                    android:id="@+id/inputMatrices_unknownsNumber"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="182dp"
+                    android:ems="10"
+                    android:hint="@string/enter_unk_number"
+                    android:singleLine="true"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/inputMatrices_createMat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputMatrices_unknownsNumber"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="41dp"
+                    android:background="@drawable/button_shape"
+                    android:onClick="createMatrix"
+			        android:padding="10dp"
+			        android:textColor="#FF6633"
+			        android:textStyle="bold"
+                    android:text="@string/create_mat" />
+
+	    	</RelativeLayout>
+	    	
+       	</LinearLayout>
+       	
+      </ScrollView>
+	    	
+
+</RelativeLayout>

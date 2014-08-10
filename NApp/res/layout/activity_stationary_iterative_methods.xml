@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF" >
+    
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+        
+    	<LinearLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent"
+	    	android:orientation="vertical" >
+    
+		    <RelativeLayout
+		        android:id="@+id/stationary_iterative_methods_view"
+		        android:layout_width="match_parent"
+		        android:layout_height="460dp" >
+
+		        <TextView
+		            android:id="@+id/stationary_iterative_methods_sim"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/stationary_iterative_methods_soe"
+		            android:layout_centerHorizontal="true"
+		            android:text="@string/stationary_iterative_methods" />
+
+		        <TextView
+		            android:id="@+id/stationary_iterative_methods_soe"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentTop="true"
+		            android:layout_centerHorizontal="true"
+		            android:text="@string/systems_of_eq"
+		            android:textAppearance="?android:attr/textAppearanceMedium"
+		            android:textColor="#FF6633"
+		            android:textStyle="bold" />
+
+		        <Button
+		            android:id="@+id/stationary_iterative_methods_calcule"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentBottom="true"
+		            android:layout_centerHorizontal="true"
+		            android:layout_marginBottom="20dp"
+		            android:background="@drawable/button_shape"
+		            android:onClick="stationaryIterativeMethods"
+		            android:padding="10dp"
+		            android:text="@string/calculate"
+		            android:textColor="#FF6633"
+		            android:textStyle="bold" />
+
+		        <RadioButton
+		            android:id="@+id/stationary_iterative_methods_absDispersion"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_above="@+id/stationary_iterative_methods_relDispersion"
+		            android:layout_alignLeft="@+id/stationary_iterative_methods_soe"
+		            android:onClick="selectDispersionType"
+		            android:text="@string/abs_dispersion" />
+
+		        <RadioButton
+		            android:id="@+id/stationary_iterative_methods_relDispersion"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_above="@+id/stationary_iterative_methods_etNIterations"
+		            android:layout_alignLeft="@+id/stationary_iterative_methods_absDispersion"
+		            android:layout_marginBottom="17dp"
+		            android:onClick="selectDispersionType"
+		            android:text="@string/rel_dispersion" />
+
+		        <EditText
+		            android:id="@+id/stationary_iterative_methods_etNIterations"
+		            android:layout_width="240dp"
+		            android:layout_height="wrap_content"
+		            android:layout_above="@+id/stationary_iterative_methods_jacobi_method"
+		            android:layout_centerHorizontal="true"
+		            android:layout_marginBottom="14dp"
+		            android:ems="10"
+		            android:hint="@string/enter_iterations"
+		            android:inputType="number"
+		            android:singleLine="true" />
+
+		        <EditText
+		            android:id="@+id/stationary_iterative_etAlfa"
+		            android:layout_width="190dp"
+		            android:layout_height="wrap_content"
+		            android:layout_above="@+id/stationary_iterative_methods_absDispersion"
+		            android:layout_centerHorizontal="true"
+		            android:layout_marginBottom="16dp"
+		            android:ems="10"
+		            android:hint="@string/enter_alfa"
+		            android:inputType="numberDecimal" />
+
+		        <EditText
+		            android:id="@+id/stationary_iterative_methods_etTolerance"
+		            android:layout_width="250dp"
+		            android:layout_height="wrap_content"
+		            android:layout_above="@+id/stationary_iterative_etAlfa"
+		            android:layout_alignLeft="@+id/stationary_iterative_methods_etNIterations"
+		            android:layout_marginBottom="16dp"
+		            android:ems="10"
+		            android:hint="@string/enter_tolerance"
+		            android:singleLine="true"
+		            android:textSize="14sp" />
+
+		        <RadioButton
+		            android:id="@+id/stationary_iterative_methods_jacobi_method"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_above="@+id/stationary_iterative_methods_calcule"
+		            android:layout_alignLeft="@+id/stationary_iterative_methods_etNIterations"
+		            android:layout_marginBottom="15dp"
+		            android:onClick="selectMethodType"
+		            android:text="@string/jacobi" />
+
+		        <RadioButton
+		            android:id="@+id/stationary_iterative_methods_seidel_method"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignRight="@+id/stationary_iterative_methods_etTolerance"
+		            android:layout_below="@+id/stationary_iterative_methods_etNIterations"
+		            android:onClick="selectMethodType"
+		            android:text="@string/gauss_seidel" />
+
+		        <TableLayout
+		            android:id="@+id/stationary_iterative_methods_initial_values"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_above="@+id/stationary_iterative_methods_etTolerance"
+		            android:layout_centerHorizontal="true"
+		            android:layout_marginBottom="17dp" />
+
+		    </RelativeLayout>
+		    
+		    <RelativeLayout 
+	    
+			    android:id="@+id/stationary_iterative_methods_result_view"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent" >
+			
+		    	<TextView
+			        android:id="@+id/stationary_iterative_methods_method_result"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="182dp"
+			        android:layout_marginLeft="10dp"
+			        android:layout_marginRight="10dp"
+			        android:gravity="center"
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		    	<TextView
+		    	    android:id="@+id/method_iterative_label"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_alignParentLeft="true"
+		    	    android:layout_alignParentTop="true"
+		    	    android:layout_marginLeft="28dp"
+		    	    android:layout_marginTop="21dp"
+		    	    android:textColor="#FF6633"
+		    	    android:text="@string/method"
+		    	    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+		    	<TextView
+		    	    android:id="@+id/method_used_iterative"
+		    	   	android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_alignBaseline="@+id/method_iterative_label"
+		    	    android:layout_alignBottom="@+id/method_iterative_label"
+		    	    android:layout_marginLeft="28dp"
+		    	    android:layout_toRightOf="@+id/method_iterative_label"
+		    	    android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+			</RelativeLayout>
+		    
+	    </LinearLayout>
+		    
+   	</ScrollView>
+   	
+    
+</RelativeLayout>

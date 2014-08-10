@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF" >
+
+	
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/luFactorization_view"
+                android:layout_width="match_parent"
+                android:layout_height="460dp" >
+
+                <TextView
+                    android:id="@+id/luFactorization_lf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/luFactorization_soe"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/lu_factorization" />
+
+                <TextView
+                    android:id="@+id/luFactorization_soe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/systems_of_eq"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FF6633"
+                    android:textStyle="bold" />
+                
+                <Button
+		  	  	    android:id="@+id/luFactorization_calculate"
+		  	  	    android:layout_width="wrap_content"
+		  	  	    android:layout_height="wrap_content"
+		  	  	    android:layout_alignParentBottom="true"
+		  	  	    android:layout_centerHorizontal="true"
+		  	  	    android:layout_marginBottom="52dp"
+		  	  	    android:background="@drawable/button_shape"
+		  	  	    android:onClick="luFactorization"
+		  	  	    android:padding="10dp"
+		  	  	    android:text="@string/calculate"
+		  	  	    android:textColor="#FF6633"
+		  	  	    android:textStyle="bold" />
+
+			    <RadioButton
+			        android:id="@+id/lu_factorization_cholesky_method"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignLeft="@+id/lu_factorization_doolittle_method"
+			        android:layout_centerVertical="true"
+			        android:onClick="selectMethod"
+			        android:text="@string/cholesky" />
+
+			    <RadioButton
+			        android:id="@+id/lu_factorization_doolittle_method"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_above="@+id/lu_factorization_cholesky_method"
+			        android:layout_alignLeft="@+id/lu_factorization_crout_method"
+			        android:layout_marginBottom="20dp"
+			        android:onClick="selectMethod"
+			        android:text="@string/doolittle" />
+
+			    <RadioButton
+			        android:id="@+id/lu_factorization_crout_method"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_above="@+id/lu_factorization_doolittle_method"
+			        android:layout_alignLeft="@+id/luFactorization_soe"
+			        android:layout_marginBottom="14dp"
+			        android:layout_marginLeft="22dp"
+			        android:checked="true"
+			        android:onClick="selectMethod"
+			        android:text="@string/crout" />
+
+			    <TableLayout
+			        android:id="@+id/newVectorB"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_above="@+id/luFactorization_calculate"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginBottom="42dp" />
+
+				</RelativeLayout>
+				
+            	<RelativeLayout  
+				    android:id="@+id/luFactorization_result_view"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent" >
+				
+			    	<TextView
+				        android:id="@+id/luFactorization_method_result"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentTop="true"
+				        android:layout_centerHorizontal="true"
+				        android:layout_marginTop="182dp"
+				        android:layout_marginLeft="10dp"
+				        android:layout_marginRight="10dp"
+				        android:gravity="center"
+				        android:textAppearance="?android:attr/textAppearanceMedium" />
+			    	
+   			    	<TextView
+			    	    android:id="@+id/lu_factorization_method_label"
+			    	    android:layout_width="wrap_content"
+			    	    android:layout_height="wrap_content"
+			    	    android:layout_alignParentLeft="true"
+			    	    android:layout_alignParentTop="true"
+			    	    android:layout_marginLeft="28dp"
+			    	    android:layout_marginTop="21dp"
+			    	    android:textColor="#FF6633"
+			    	    android:text="@string/method"
+			    	    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		    		<TextView
+			    	    android:id="@+id/lu_factorization_method_used"
+			    	    android:layout_width="wrap_content"
+			    	    android:layout_height="wrap_content"
+			    	    android:layout_alignBaseline="@+id/lu_factorization_method_label"
+			    	    android:layout_alignBottom="@+id/lu_factorization_method_label"
+			    	    android:layout_marginLeft="28dp"
+			    	    android:layout_toRightOf="@+id/lu_factorization_method_label"
+			    	    android:textAppearance="?android:attr/textAppearanceMedium" />
+						
+				</RelativeLayout>
+				
+			</LinearLayout>
+			
+        </ScrollView>
+        
+
+</RelativeLayout>

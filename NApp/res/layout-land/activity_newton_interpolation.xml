@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/guide_menu_root_view"
+    android:background="#CCFFFF" >
+    
+    
+    <ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:fillViewport="true" >
+	    
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+
+			<RelativeLayout
+			    android:id="@+id/newtonInterpolation_result_view"
+			    android:layout_width="match_parent"
+			    android:layout_height="252dp" >
+					
+		        <TextView
+		            android:id="@+id/newtonInterpolation_i"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentTop="true"
+		            android:layout_centerHorizontal="true"
+		            android:text="@string/interpolation"
+		            android:textAppearance="?android:attr/textAppearanceMedium"
+		            android:textColor="#FF6633"
+		            android:textStyle="bold" />
+		
+		        <TextView
+		            android:id="@+id/newton_interpolation_ni"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/newtonInterpolation_i"
+		            android:layout_centerHorizontal="true"
+		            android:text="@string/newton_interpolation" />
+		
+		        <TextView
+		            android:id="@+id/newton_interpolation_method_result_label"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/newton_interpolation_ni"
+		            android:layout_centerHorizontal="true"
+		            android:layout_marginTop="19dp"
+		            android:gravity="center"
+		            android:text="@string/newton_divided_differences_interpolation_polynomial"
+		            android:textAppearance="?android:attr/textAppearanceMedium"
+		            android:textColor="#FF6633" />
+		
+		        <Button
+		            android:id="@+id/newton_interpolation_evaluate"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignTop="@+id/newton_interpolation_evaluate_value"
+		            android:layout_toRightOf="@+id/newton_interpolation_evaluate_value"
+		            android:background="@drawable/button_shape"
+		            android:onClick="evaluateWithX"
+		            android:padding="10dp"
+		            android:text="@string/evaluate"
+		            android:textColor="#FF6633"
+		            android:textStyle="bold" />
+		
+		        <TextView
+		            android:id="@+id/newton_interpolation_evaluate_value_label"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignBaseline="@+id/newton_interpolation_evaluate"
+		            android:layout_alignBottom="@+id/newton_interpolation_evaluate"
+		            android:layout_marginRight="14dp"
+		            android:layout_toLeftOf="@+id/newton_interpolation_evaluate_value"
+		            android:text="@string/x"
+		            android:textAppearance="?android:attr/textAppearanceMedium"
+		            android:textStyle="bold" />
+		
+		        <TextView
+		            android:id="@+id/newton_interpolation_method_result"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_below="@+id/newton_interpolation_method_result_label"
+		            android:gravity="center" />
+		
+		        <EditText
+		            android:id="@+id/newton_interpolation_evaluate_value"
+		            android:layout_width="115dp"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentBottom="true"
+		            android:layout_alignRight="@+id/newtonInterpolation_i"
+		            android:layout_marginBottom="26dp"
+		            android:layout_marginRight="19dp"
+		            android:ems="10"
+		            android:hint="@string/enter_x_value"
+		            android:singleLine="true"
+		            android:textSize="15sp" />
+		
+		    </RelativeLayout>
+
+	    </LinearLayout>
+	    
+    </ScrollView>
+		   
+    
+</RelativeLayout>

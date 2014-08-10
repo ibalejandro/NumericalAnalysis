@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/guide_menu_root_view"
+    android:background="#CCFFFF" >
+    
+    
+    <ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+	    
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical" >
+
+			<RelativeLayout
+	            android:id="@+id/ove_results_table_view"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:gravity="center_horizontal" >
+
+	            <TextView
+	                android:id="@+id/ove_results_table_action"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentTop="true"
+	                android:layout_centerHorizontal="true"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+	                android:textColor="#FF6633"
+	                android:textStyle="bold" />
+
+	            <TextView
+	                android:id="@+id/ove_results_table_method_name"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/ove_results_table_action"
+	                android:layout_centerHorizontal="true" />
+
+	            <TableLayout
+	                android:id="@+id/ove_results_table"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/ove_results_table_method_name"
+	                android:layout_marginTop="40dp" />
+
+	             <ZoomControls
+	                 android:id="@+id/zoomControls"
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content"
+	                 android:layout_centerHorizontal="true"
+	                 android:layout_marginTop="39dp" />
+
+	        </RelativeLayout>
+			
+			<RelativeLayout
+		            android:id="@+id/ove_help_view"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent" >
+	
+		            <TextView
+		                android:id="@+id/ove_action"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentTop="true"
+		                android:layout_centerHorizontal="true"
+		                android:textAppearance="?android:attr/textAppearanceMedium"
+		                android:textColor="#FF6633"
+		                android:textStyle="bold" />
+	
+		            <TextView
+		                android:id="@+id/ove_method_name"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_below="@+id/ove_action"
+		                android:layout_centerHorizontal="true" />
+	
+		            <TextView
+		                android:id="@+id/ove_action_development"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_below="@+id/ove_method_name"
+		                android:layout_marginLeft="10dp"
+		                android:layout_marginRight="10dp"
+		                android:layout_marginTop="52dp"
+		                android:gravity="center|left"
+		                android:textAppearance="?android:attr/textAppearanceMedium"
+		                android:textSize="15sp" />
+	        </RelativeLayout>
+
+			<RelativeLayout
+		        
+			    android:id="@+id/ove_see_example_view"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent" >
+			    
+		    </RelativeLayout>
+
+	    </LinearLayout>
+	    
+    </ScrollView>
+		   
+    
+</RelativeLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_one_variable_equations">One Variable Equations</string>
+    <string name="title_activity_incremental_search">Incremental Search</string>
+    <string name="title_activity_bisection">Bisection</string>
+    <string name="title_activity_false_position">False Position</string>
+    <string name="enter_x_lower">Enter lower limit</string>
+    <string name="enter_x_upper">Enter upper limit</string>
+    <string name="enter_tolerance">Enter tolerance e.g., 0.5E-8, 10^-5</string>
+    <string name="enter_iterations">Enter number of iterations</string>
+    <string name="calculate">Calculate</string>
+    <string name="one_variable_eq">One Variable Equations</string>
+    <string name="bisection">Bisection</string>
+    <string name="x_lower_not_less">Lower limit must be less than upper limit.</string>
+    <string name="invalid_tolerance">Tolerance format is not valid.</string>
+    <string name="fill_in_all_fields">Fill in all fields, please.</string>
+    <string name="false_position">False Position</string>
+    <string name="incremental_search">Incremental Search</string>
+    <string name="enter_initial_value">Enter initial value</string>
+    <string name="enter_delta_value">Enter delta value</string>
+    <string name="entered_values_format_not_valid">Entered values format is not valid.</string>
+    <string name="help">Help</string>
+    <string name="step_by_step">Step by step</string>
+    <string name="guide_menu">Guide menu</string>
+    <string name="title_activity_guide_menu">Guide Menu</string>
+    <string name="incremental_search_help">The aim of the method is to find an interval containing at least one root of a particular function. The function is evaluated in an initial point and in that same point plus a delta. If one of the evaluations is negative and the other is positive, we can ensure that there is a root between those points.</string>
+    <string name="bisection_help">Bisection method splits the initial interval, that has the function’s root, in two subintervals of the same size. To select the new interval, the function evaluated in the midpoint is multiplied with the function evaluated in the interval’s lower limit. If the result is negative, the new interval is [lower limit, midpoint], otherwise the new interval is [midpoint, upper limit].</string>
+    <string name="false_position_help">This method conserves all the characteristics and conditions of the Bisection method, except for the way how the midpoint inside the given interval is calculated. In this case, the line joining the points (a, f(a)) and \t\t(b, f(b)) is found and, because one of that points is above the x-axis and the other one is below it, we know that there’s a cutoff point between the line and the mentioned axis. This cutoff point has the form (Xm, 0), \t\twhere Xm represents the searched midpoint.</string>
+    <string name="error_calc_error">\tError calculation problem. \nPlease, try with absolute error.</string>
+    <string name="abs_error">Absolute error</string>
+    <string name="rel_error">Relative error</string>
+    <string name="results_table">Results Table</string>
+    <string name="title_activity_fixed_point">Fixed Point</string>
+    <string name="enter_g_x">Enter g(x) (if necessary)</string>
+    <string name="fixed_point">Fixed Point</string>
+    <string name="title_activity_newton">Newton</string>
+    <string name="newton">Newton</string>
+    <string name="enter_d_f_x">Enter f \'(x) (if necessary)</string>
+    <string name="secant">Secant</string>
+    <string name="multiple_roots">Multiple Roots</string>
+    <string name="title_activity_secant">Secant</string>
+    <string name="title_activity_multiple_roots">Multiple Roots</string>
+    <string name="fixed_point_help">When given a function f(x)= 0, we need to isolate one of its variables to get a function x = g(x). Then we give an initial point that seems to be near a root of the function f(x) and call it X0. To calculate X1 we need to evaluate g(x) in X0, to calculate X2 we need to evaluate g(x) in X1, and so on until we find a value where Xn+1=g(Xn).</string>
+    <string name="newton_help">This method conserves all the characteristics and conditions of the Fixed Point method, except for how g function is calculated. In this case \n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tg(x) = x – (f(x) / f \'(x)) \n\nSo Xn+1 is calculated as Xn+1 = Xn – (f(Xn) / f \'(Xn)).</string>
+    <string name="secant_help">The Secant method is a variant of the Newton’s Method, but in this method the derivative is replaced with an expression which brings it nearer \n\n\t\t\t\t\tXn+2 = Xn+1 – (f(Xn+1)*(Xn+1-Xn) / f(Xn+1) - f(Xn)) \n\nThis way, and beginning with two initial random values, the next one can be calculated using the mentioned expression as \nX2 = X1 – ((f(X1)*(X1-X0)) / (f(X1)-f(X0)).</string>
+    <string name="multiple_roots_help">This method is a variant of Newton’s method to solve equations that have roots with critical values (minimum, maximum or inflection). The following expression is used to calculate the next Xn \n\n\t\t\t\tXn+1 = Xn - ((f(Xn)*f \'(Xn)) / ((f \'(Xn)^2) – (f(Xn)*f \'\'(Xn))))</string>
+    <string name="enter_d_2_f_x">Enter f \'\'(x) (if necessary)</string>
+
+    <string-array name="one_var_eqs_methods">
+        <item>Incremental Search</item>
+        <item>Bisection</item>
+        <item>False Position</item>
+        <item>Fixed Point</item>
+        <item>Newton</item>
+        <item>Secant</item>
+        <item>Multiple Roots</item>
+    </string-array>
+
+    <string name="f_x">f(x) = </string>
+    <string name="df_x">f  \'(x) = </string>
+    <string name="d2f_x">f \'\'(x) = </string>
+    <string name="g_x">g(x) = </string>
+    <string name="go_to_methods">Go to the methods!</string>
+    <string name="enter_f_x">Enter f(x)</string>
+    <string name="title_activity_input_functions">Input Functions</string>
+    <string name="f_x_empty">f(x) is necessary.</string>
+    <string name="see_example">See an example</string>
+    <string name="title_activity_topics">Topics</string>
+    <string name="systems_of_eq">Systems of Equations</string>
+    <string name="interpolation">Interpolation</string>
+    <string name="g_x_empty">g(x) is necessary.</string>
+    <string name="d_f_x_empty">f \'(x) is necessary.</string>
+    <string name="d_f_x_and_d_2_f_x_empty">f \'(x) and f \'\'(x) are necessary.</string>
+    <string name="error_in_fx">Error in f(x).</string>
+    <string name="error_in_dfx">Error in f \'(x).</string>
+    <string name="error_in_d2fx">Error in f \'\'(x).</string>
+    <string name="error_in_gx">Error in g(x).</string>
+    <string name="zoom_in">+</string>
+    <string name="zoom_out">-</string>
+    <string name="how_to_enter_function">How to enter a function?</string>
+    <string name="title_activity_input_matrices">Input Matrices</string>
+    <string name="title_activity_systems_of_equations">Systems of Equations</string>
+
+    <string-array name="systems_of_eqs_methods">
+        <item>Gaussian Elimination</item>
+        <item>LU Factorization</item>
+        <item>Stationary Iterative Methods</item>
+    </string-array>
+
+    <string name="how_to_enter_matrix">How to enter a matrix?</string>
+    <string name="title_activity_gaussian_elimination">Gaussian Elimination</string>
+    <string name="title_activity_lufactorization">LU Factorization</string>
+    <string name="gaussian_elimination">Gaussian Elimination</string>
+    <string name="lu_factorization">LU Factorization</string>
+    <string name="enter_matrix_a">Enter Matrix A</string>
+    <string name="enter_vector_b">Enter vector b</string>
+    <string name="enter_unk_number">Enter the number of unknowns</string>
+    <string name="create_mat">Create Matrix</string>
+    <string name="enter_valid_unk_number">Enter a valid number of unknowns, please.</string>
+    <string name="total_pivoting">Total Pivoting</string>
+    <string name="without_pivoting">Without Pivoting</string>
+    <string name="partial_pivoting">Partial Pivoting</string>
+    <string name="scaled_partial_pivoting">Scaled Partial Pivoting</string>
+    <string name="inf_solutions">The system of equations has infinite solutions.</string>
+    <string name="pivoting">Pivoting: </string>
+    <string name="without_pivoting_help">Given an augmented matrix Ab, the purpose of the Gaussian Elimination is to do elementary row operations until we get the equivalent system, in which the coefficient matrix is an upper triangular matrix. For that purpose, in the stage k, we calculate the multipliers of each row dividing each element of the column k under the element in the diagonal by the element of the row k. After that, we change every row under the row k for a new row, calculated as: \n\n\t\t\t\t\t\t\tNew Row (i) = Row (i) – Multiplier(i)(k)*Row (k) \n\nOnce we get the desired upper triangular matrix, regressive substitution is applied to solve the system of equations.</string>
+    <string name="partial_pivoting_help">The Gaussian Elimination method with partial pivoting is a variant of Gaussian Elimination. But with the objective to reduce propagation of error, we try to locate into the diagonal all the possible maximum values of each column of the submatrix (excluding the column of the independent terms) changing its rows. For that purpose, in the stage k, we have to search the higher value (in absolute value) of the column k under the element in the diagonal and change the row in which that higher value is located with the row k.</string>
+    <string name="total_pivoting_help">The Gaussian Elimination method with total pivoting has the same characteristics of Gaussian Elimination. But with the objective to reduce propagation of error, we try to locate into the diagonal all the possible maximum values of the submatrix (excluding the column of the independent terms) changing its rows and/or columns. For that purpose, in the stage k, first, we create a marks vector using the numbers from 1 to n for the unknowns. Then, we have to search the higher value (in absolute value) of the submatrix formed by the rows under the row k and the columns to the right of the column k. Once we find that higher value, we have to change the row and/or column in which that higher value is located with the row and/or column k to put that element in the diagonal, not forgetting to change the marks values when we needed to change columns.</string>
+    <string name="scaled_partial_pivoting_help">The Gaussian Elimination method with scaled partial pivoting is a variant of Gaussian Elimination with partial pivoting. But with the objective to reduce propagation of error, first and only at the beginning of the process, we find and store the maximum value of each row (excluding the column of the independent terms). Then, we try to locate into the diagonal all the possible maximum values (in absolute value) between the elements of each column divided by the maximum value of its respective row, using the maximum row values that we found at the beginning. For that purpose, in the stage k, we have to search the higher value (in absolute value), under the element in the diagonal, between the elements of the column k divided by its respective maximum row value (found at the beginning) and change the row in which that higher value is located with the row k.</string>
+    <string name="method">Method: </string>
+    <string name="crout">Crout</string>
+    <string name="doolittle">Doolittle</string>
+    <string name="cholesky">Cholesky</string>
+    <string name="crout_help">The direct factorization method of Crout pretends to decompose a matrix A into the product of the two matrices L (lower triangular matrix) and U (upper triangular matrix), so that LU = A. For that purpose, we begin with one lower triangular matrix where the elements different from zero are unknown, and with a upper triangular one where the elements different from zero are unknown but the elements of the diagonal are one (1), so that U[i][i]. Then, we use the matrix multiplication concept to find both matrices unknown elements. Once we have L and U, progressive and regressive substitution are applied to solve the system of equations.</string>
+    <string name="doolittle_help">The direct factorization method of Doolittle pretends to decompose a matrix A into the product of the two matrices L (lower triangular matrix) and U (upper triangular matrix), so that LU = A. For that purpose, we begin with one lower triangular matrix where the elements different from zero are unknown but the elements of the diagonal are one (1), so that L[i][i], and with a upper triangular one where the elements different from zero are unknown. Then, we use the matrix multiplication concept to find both matrices unknown elements. Once we have L and U, progressive and regressive substitution are applied to solve the system of equations.</string>
+    <string name="cholesky_help">The direct factorization method of Cholesky pretends to decompose a matrix A into the product of the two matrices L (lower triangular matrix) and U (upper triangular matrix), so that LU = A. For that purpose, we begin with one lower triangular matrix and with one upper triangular one where the elements different from zero are unknown, but with the particularity that the elements of the diagonals of both matrices have the same values, so that L[i][i] = U[i][i]. Then, we use the matrix multiplication concept to find both matrices unknown elements. Once we have L and U, progressive and regressive substitution are applied to solve the system of equations.</string>
+    <string name="stages_table">Stages Table</string>
+    <string name="title_activity_stationary_iterative_methods">Stationary Iterative Methods</string>
+    <string name="stationary_iterative_methods">Stationary Iterative Methods</string>
+    <string name="enter_alfa">Enter Alfa (optional)</string>
+    <string name="abs_dispersion">Absolute Dispersion</string>
+    <string name="rel_dispersion">Relative Dispersion</string>
+    <string name="jacobi">Jacobi</string>
+    <string name="gauss_seidel">Gauss-Seidel</string>
+    <string name="invalid_alfa_value">The Alfa value must be between 0 and 2.</string>
+    <string name="jacobi_help">This method is based on the Fixed Point method. That means that with an initial approximation of the solution, we can generate other approximations nearer to the real values of the variables. The Jacobi method is an iterative algorithm for determining the solutions of a system of linear equations. For the execution of the method, first we try to convert the given A matrix to a diagonal dominant one moving its rows and columns. Then, we take each equation and put the diagonal variable in terms of the other variables. After that, we have to assign initial values to the variables and find the first approximation of each one using the cleared equations. We continue replacing the values of the previous iterations in the mentioned equations to generate more approximations to the real solution until we reach the permitted tolerance. The method stops when the higher value of the dispersion (in absolute value) is less than the tolerance. One feature of this method is that it works simultaneously and independently, that means that in every iteration the whole new approximations are calculated using only the previous ones.\n\nRemember that the Alfa value is used to obtain or to improve the system’s convergence. For non-relaxation use Alfa = 1; to obtain the convergence of non-convergent systems use Alfa between 0 and 1; and to accelerate the convergence of convergent but slow systems use Alfa between 1 and 2.</string>
+    <string name="gauss_seidel_help">This method is based on the Fixed Point method. That means that with an initial approximation of the solution, we can generate other approximations nearer to the real values of the variables. The Gauss-Seidel method is an iterative algorithm for determining the solutions of a system of linear equations. For the execution of the method, first we try to convert the given A matrix to a diagonal dominant one moving its rows and columns. Then, we take each equation and put the diagonal variable in terms of the other variables. After that, we have to assign initial values to the variables and find the first approximation of each one using the cleared equations, but with the particularity that we replace the variable values not with the previous iterations ones, but with the current calculated ones. We continue replacing the current calculated values in the mentioned equations to generate more approximations to the real solution until we reach the permitted tolerance. The method stops when the higher value of the dispersion (in absolute value) is less than the tolerance. One feature of this method is that in every iteration the new approximations are used to calculate the other current ones, which haven’t been calculated yet.\n\nRemember that the Alfa value is used to obtain or to improve the system’s convergence. For non-relaxation use Alfa = 1; to obtain the convergence of non-convergent systems use Alfa  between 0 and  1; and to accelerate the convergence of convergent but slow systems use Alfa between 1 and 2.</string>
+    <string name="error_calc_disp">\tDispersion calculation problem. \nPlease, try with absolute dispersion.</string>
+    <string name="previous">&lt;&lt; Previous</string>
+    <string name="next">Next &gt;&gt;</string>
+    <string name="impossible_to_solve">The system of equations can\'t be solved using this method.</string>
+    <string name="l">L</string>
+    <string name="u">U</string>
+    <string name="determinant">Matrix A determinant</string>
+    <string name="change_vector_b">Change Vector b</string>
+    <string name="title_activity_input_evaluated_functions">Input Evaluated Functions</string>
+    <string name="title_activity_interpolation">Interpolation</string>
+
+    <string-array name="interpolation_methods">
+        <item>Newton Interpolation</item>
+        <item>Lagrange Interpolation</item>
+        <item>Cubic Spline</item>
+    </string-array>
+
+    <string name="title_activity_newton_interpolation">Newton Interpolation</string>
+    <string name="enter_points_number">Enter number of points</string>
+    <string name="create_table">Create Table</string>
+    <string name="enter_Xn">Enter Xn</string>
+    <string name="enter_fXn">Enter f(Xn)</string>
+    <string name="enter_valid_points_number">Enter a valid number of points, please.</string>
+    <string name="how_to_enter_eval_function">How to enter an evaluated function?</string>
+    <string name="evaluate_polynomial">Evaluate polynomial</string>
+    <string name="newton_interpolation">Newton Interpolation</string>
+    <string name="newton_divided_differences_interpolation_polynomial">The Newton\' s divided differences interpolating polynomial is \n p(x) = </string>
+    <string name="enter_x_value">Enter x value</string>
+    <string name="x">x = </string>
+    <string name="evaluate">Evaluate</string>
+    <string name="title_activity_lagrange_interpolation">Lagrange Interpolation</string>
+    <string name="lagrange_interpolation">Lagrange Interpolation</string>
+    <string name="lagrange_polynomial">The Lagrange\' s polynomial is p(x) = </string>
+    <string name="newton_interpolation_help">This method is used to determine the polynomial that passes through some given points (x, f(x)). The Newton´s interpolation method uses the concept of divided differences. The divided differences allow us to calculate several of the desired polynomial, because we use the given points incrementally to obtain an interpolating polynomial of different order in each step. The interpolating polynomial would look like: \n\n\t\t\t P(x) = f[X0] + f[X0, x1](x-X0) + f[X0, X1, X2](x-X0)(x-X1)+…+\n\t\t\t\t\t\t\t f[X0, X1, X2, X3,…, Xn](x-X0)(x-X1)…(x-Xn-1) \n\n , where the k+1 divided difference is an approximation to the derivative of the k divided difference evaluated in Xk. So, \n\n\t\t\t\t\t\t\t\t f[Xk, Xk+1] = (f[Xk+1] – f[Xk]) / (Xk+1 – Xk) \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t = (f(Xk+1) – f(Xk)) / (Xk+1 – Xk)</string>
+    <string name="lagrange_interpolation_help">This method is used to determine the lowest order polynomial that passes through some given points (x, f(x)). The polynomial looks like: \n\n\t\t\t\t P(x) = L0(x)f(X0) + L1(x)f(X1) + L2(x)f(X2) + … + Ln(x)f(Xn) \n\n ,where Lk is calculated as the quotient of the polynomial formed by the multiplication of the subtractions between x and the x-coordinate of every given point except for the k point, and the multiplication of the subtractions between the x-coordinate of the k point and the x-coordinates of every given point except for the k point again. So, \n\n\t\t\t\t\t\t Lk(x) = ((x-X0)(x-X1)…(x-Xk-1)(x-Xk+1)…(x-Xn))/ \n\t\t\t\t\t\t\t\t\t\t ((Xk-X0)(Xk-X1)…(Xk-Xk-1)(Xk-Xk+1)…(Xk-Xn))</string>
+    <string name="title_activity_cubic_spline">Cubic Spline</string>
+    <string name="cubic_spline">Cubic Spline</string>
+    <string name="polynom_not_determined">The polynom couldn\' t be determined using Cubic Spline.</string>
+    <string name="value_not_between_interval">The entered value must be inside \n\t\t\t the interval</string>
+	<string name="cubic_spline_polynomial">The Cubic Spline\' s piecewise polynomial is s(x) = </string>
+	<string name="result_eqs_interpolation">Resulting Equations</string>
+	<string name="cubic_spline_help"><![CDATA[Cubic Spline interpolation method is a form of interpolation where a special type of piecewise polynomial, called a spline, is determined. Given n+1 points, the Cubic Spline interpolation method determines n order-3-polynomials for every interval between each pair of points. This method is based in four characteristics: the function is continuous, it passes through every given point, the first derivative in the connection-points exists and, to preserve the function’s concavity, the second derivative is the same in the connection-points. Using this characteristics and given n+1 points, a system of equations (4*n)X(4*n) is generated and the result of that system after applying the Gaussian Elimination method with total pivoting is a vector with (4*n) values, in order,  where each value represents the coefficient accompanying each term in every piecewise polynomial. <br><br>The general form of every piecewise polynomial is: <br><br>\t\t\t\t  A(i)*(x^3) + B(i)*(x^2) + C(i)*x + D(i) \t\t <strong>X(i) &lt;= x &lt;= X(i+1)</strong>]]></string>
+	<string name="calc_mat_inverse">Calculate Matrix Inverse</string>
+	<string name="mat_inverse">Matrix Inverse</string>
+	<string name="each_f_x_to_single_x">\t\tEach f(Xn) value should \ncorrespond to a single Xn value.</string>
+	  
+</resources>

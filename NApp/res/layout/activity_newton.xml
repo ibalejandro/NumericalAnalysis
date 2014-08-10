@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF" >
+    
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+        
+    	<LinearLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent"
+	    	android:orientation="vertical" >
+
+		    <RelativeLayout
+		        
+			    android:id="@+id/newton_view"
+			    android:layout_width="match_parent"
+			    android:layout_height="460dp" >
+		
+		    	<TextView
+			        android:id="@+id/newton_n"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/newton_ove"
+			        android:layout_centerHorizontal="true"
+			        android:text="@string/newton" />
+		
+		  	  	<TextView
+			        android:id="@+id/newton_ove"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:layout_centerHorizontal="true"
+			        android:text="@string/one_variable_eq"
+			        android:textColor="#FF6633"
+			        android:textStyle="bold"
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		  	  	<Button
+		  	  	    android:id="@+id/newton_calculate"
+		  	  	    android:layout_width="wrap_content"
+		  	  	    android:layout_height="wrap_content"
+		  	  	    android:layout_alignParentBottom="true"
+		  	  	    android:layout_centerHorizontal="true"
+		  	  	    android:layout_marginBottom="52dp"
+		  	  	    android:background="@drawable/button_shape"
+		  	  	    android:onClick="newton"
+		  	  	    android:padding="10dp"
+		  	  	    android:text="@string/calculate"
+		  	  	    android:textColor="#FF6633"
+		  	  	    android:textStyle="bold" />
+		
+		  	  	<EditText
+		  	  	    android:id="@+id/newton_etNIterations"
+		  	  	    android:layout_width="240dp"
+		  	  	    android:layout_height="wrap_content"
+		  	  	    android:layout_above="@+id/newton_calculate"
+		  	  	    android:layout_centerHorizontal="true"
+		  	  	    android:layout_marginBottom="32dp"
+		  	  	    android:ems="10"
+		  	  	    android:singleLine="true"
+		  	  	    android:hint="@string/enter_iterations"
+		  	  	    android:inputType="number" />
+		
+		  	  	<RadioButton
+		  	  	    android:id="@+id/newton_relError"
+		  	  	    android:layout_width="wrap_content"
+		  	  	    android:layout_height="wrap_content"
+		  	  	    android:layout_alignBaseline="@+id/newton_absError"
+		  	  	    android:layout_alignBottom="@+id/newton_absError"
+		  	  	    android:layout_marginLeft="16dp"
+		  	  	    android:layout_toRightOf="@+id/newton_absError"
+		  	  	    android:text="@string/rel_error"
+		  	  	    android:onClick="selectErrorType" />
+
+		  	  	<EditText
+		  	  	    android:id="@+id/newton_etTolerance"
+		  	  	    android:layout_width="250dp"
+		  	  	    android:layout_height="wrap_content"
+		  	  	    android:layout_above="@+id/newton_relError"
+		  	  	    android:layout_centerHorizontal="true"
+		  	  	    android:layout_marginBottom="46dp"
+		  	  	    android:ems="10"
+		  	  	    android:hint="@string/enter_tolerance"
+		  	  	    android:singleLine="true"
+		  	  	    android:textSize="14sp" >
+
+		  	  	    <requestFocus />
+		  	  	</EditText>
+
+		  	  	<RadioButton
+		  	  	    android:id="@+id/newton_absError"
+		  	  	    android:layout_width="wrap_content"
+		  	  	    android:layout_height="wrap_content"
+		  	  	    android:layout_above="@+id/newton_etNIterations"
+		  	  	    android:layout_alignParentLeft="true"
+		  	  	    android:layout_marginBottom="30dp"
+		  	  	    android:layout_marginLeft="18dp"
+		  	  	    android:onClick="selectErrorType"
+		  	  	    android:text="@string/abs_error" />
+
+		  	  	<EditText
+		  	  	    android:id="@+id/newton_etX0"
+		  	  	    android:layout_width="170dp"
+		  	  	    android:layout_height="wrap_content"
+		  	  	    android:layout_above="@+id/newton_etTolerance"
+		  	  	    android:layout_centerHorizontal="true"
+		  	  	    android:layout_marginBottom="28dp"
+		  	  	    android:ems="10"
+		  	  	    android:hint="@string/enter_initial_value"
+		  	  	    android:singleLine="true" />
+		
+		    </RelativeLayout>
+		    
+		    <RelativeLayout 
+    
+			    android:id="@+id/newton_result_view"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent" >
+			
+			   	<TextView
+			        android:id="@+id/newton_method_result"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="182dp"
+			        android:layout_marginLeft="10dp"
+			        android:layout_marginRight="10dp"
+			        android:gravity="center"
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+			</RelativeLayout>
+		    
+	    </LinearLayout>
+    
+	</ScrollView>
+
+    	
+</RelativeLayout>

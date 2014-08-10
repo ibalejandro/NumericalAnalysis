@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#F0E68C"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/selectTypeCond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp"
+        android:textSize="25sp"
+        android:textColor="#228B22"
+        android:textStyle="bold"
+        android:text="@string/type_cond" />
+
+    <RadioButton
+        android:id="@+id/dbCond1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/flCond1"
+        android:layout_below="@+id/flCond1"
+        android:layout_marginTop="17dp"
+        android:onClick="selectTypeAndCond"
+        android:text="@string/double_condition1" />
+
+    <RadioButton
+        android:id="@+id/flCond2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dbCond1"
+        android:layout_below="@+id/dbCond1"
+        android:layout_marginTop="24dp"
+        android:onClick="selectTypeAndCond"
+        android:text="@string/float_condition2" />
+
+    <RadioButton
+        android:id="@+id/dbCond2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/flCond2"
+        android:layout_below="@+id/flCond2"
+        android:layout_marginTop="23dp"
+        android:onClick="selectTypeAndCond"
+        android:text="@string/double_condition2" />
+
+    <RadioButton
+        android:id="@+id/flCond1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectTypeCond"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:onClick="selectTypeAndCond"
+        android:text="@string/float_condition1" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dbCond2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:padding="20dp"
+        android:textColor="#228B22"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="#BEBEBE"
+        android:onClick="calculateMachineEpsilon"
+        android:text="@string/calculate" />
+
+</RelativeLayout>

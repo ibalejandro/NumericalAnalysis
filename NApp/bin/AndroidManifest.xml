@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.numericalanalysis.napp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" android:debuggable="true">
+        <activity
+            android:name="com.numericalanalysis.napp.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.OneVariableEquations"
+            android:label="@string/title_activity_one_variable_equations"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.IncrementalSearch"
+            android:label="@string/title_activity_incremental_search"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.Bisection"
+            android:label="@string/title_activity_bisection"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.FalsePosition"
+            android:label="@string/title_activity_false_position"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.GuideMenu"
+            android:label="@string/title_activity_guide_menu"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.FixedPoint"
+            android:label="@string/title_activity_fixed_point"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.Newton"
+            android:label="@string/title_activity_newton"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.Secant"
+            android:label="@string/title_activity_secant"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.MultipleRoots"
+            android:label="@string/title_activity_multiple_roots"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.InputFunctions"
+            android:label="@string/title_activity_input_functions"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.Topics"
+            android:label="@string/title_activity_topics"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.InputMatrices"
+            android:label="@string/title_activity_input_matrices"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.SystemsOfEquations"
+            android:label="@string/title_activity_systems_of_equations"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.GaussianElimination"
+            android:label="@string/title_activity_gaussian_elimination"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.LUFactorization"
+            android:label="@string/title_activity_lufactorization"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.StationaryIterativeMethods"
+            android:label="@string/title_activity_stationary_iterative_methods"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.InputEvaluatedFunctions"
+            android:label="@string/title_activity_input_evaluated_functions"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.Interpolation"
+            android:label="@string/title_activity_interpolation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.NewtonInterpolation"
+            android:label="@string/title_activity_newton_interpolation"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.LagrangeInterpolation"
+            android:label="@string/title_activity_lagrange_interpolation"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.numericalanalysis.napp.CubicSpline"
+            android:label="@string/title_activity_cubic_spline"
+            android:screenOrientation="landscape" >
+        </activity>
+    </application>
+
+</manifest>
